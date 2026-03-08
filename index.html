@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>NEW CONVERTER</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+<script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js"></script>
+
+</head>
+<body>
+
+<header>
+<h1>NEW CONVERTER</h1>
+</header>
+
+<div class="tabs">
+<button class="tab active" data-tab="pdf">PDF Converter</button>
+<button class="tab" data-tab="image">Image Converter</button>
+</div>
+
+<div class="tab-content">
+
+<div id="pdf" class="tab-panel active">
+
+<div class="upload-box">
+<p>Drag & Drop or Upload Files</p>
+<input type="file" id="pdfInput" multiple accept=".jpg,.png,.webp,.pdf">
+<button id="addFileBtn">Add PDF / Image</button>
+</div>
+
+<div class="page-count">
+Total Pages: <span id="totalPages">0</span>
+</div>
+
+<div id="previewContainer"></div>
+
+<button class="main-btn" id="convertPDF">
+Convert to PDF
+</button>
+
+</div>
+
+<div id="image" class="tab-panel">
+
+<input type="file" id="imageInput" accept="image/*">
+
+<img id="imagePreview">
+
+<div class="controls">
+<label>Width</label>
+<input type="number" id="width">
+
+<label>Height</label>
+<input type="number" id="height">
+
+<label>Resolution</label>
+<input type="number" id="resolution" value="72">
+
+<label>Compression</label>
+<input type="range" id="compression" min="0.1" max="1" step="0.1">
+</div>
+
+<button class="main-btn" id="convertImage">Convert Image</button>
+
+<a id="downloadImage">Download Image</a>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
